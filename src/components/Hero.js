@@ -1,9 +1,10 @@
 import React from "react";
-import logoxongroh from "../assets/logoxongroh.png";
+import Xongroh from "../assets/Xongroh.svg";
 const Hero = () => {
   return (
-    <div className=" ">
-      <div className="card text-center d-flex align-items-center vh-100 justify-content-center bg-black  vh-100 ">
+    <div className="w-100 ">
+      <div className="text-center d-flex align-items-center  justify-content-center vh-100 " style={{backgroundColor
+      :"#000000"}}>
         <div
           className=""
           style={{
@@ -11,29 +12,31 @@ const Hero = () => {
             width: "75%",
           }}
         >
-          <div className="d-block container mb-2 p-4">
-            <h1 className="card-title textw display-3 d-flex align-items-center fw-bold justify-content-center">
+          <div className="d-block container  mb-2 p-4">
+            <h1 className="textw display-3 d-flex align-items-center fw-bold justify-content-center">
               <img
-                src={logoxongroh}
-                style={{ height: "130px", width: "125px" }}
-                className="m-3"
+                src={Xongroh}
+                style={{ height: "190px", width: "160px", borderRadius: 0 }}
+                className="m-2"
               />
-              <strong>Xongroh</strong>
+                <p className="texto m-2" style={{fontSize:"10rem"}}>ongroh</p>
+
             </h1>
           </div>
           <div
             className=" container"
             style={{
-              height: "30%",
+              height: "40%",
             }}
           >
-            <p className="card-text textw fs-3 container">
-              A Social Marketplace designed especially for the Creators.
-            </p>
+            <h3 className=" textw ">
+              A Social Marketplace designed especially for the <h3 className="texto d-inline">Creators.</h3>
+            </h3>
           </div>
         </div>
       </div>
     </div>
+   
   );
 };
 

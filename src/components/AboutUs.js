@@ -9,12 +9,13 @@ const AboutUs = () => {
           style={{
             height: "50%",
             width: "75%",
+            
           }}
         >
-          <div className="d-block container mb-2 p-4">
-            <h1 className="card-title display-4 d-flex align-items-center fw-bold justify-content-center textb" >
-              <p className="m-2">About</p>
-              <p className="m-2 texto">Us</p>
+          <div className="d-block container mb-2 p-2">
+            <h1 className="card-title d-flex align-items-center fw-bold justify-content-center textb" >
+              <p className="m-2" style={{ fontSize: "5rem" }}>About</p>
+              <p className="m-2 texto" style={{ fontSize: "5rem" }}>Us</p>
             </h1>
           </div>
           <div

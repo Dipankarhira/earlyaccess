@@ -1,11 +1,25 @@
-import React from "react";
+import {React, useState} from "react";
 import whatsapp from "../assets/whatsapp.png";
 import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
 const StillHere = () => {
+
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+     setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+     setIsHover(false);
+  };
+
+  const boxStyle = {
+    
+  };
+
   return (
     <div className=" ">
-      <div className="card text-center d-flex align-items-center vh-100 justify-content-center bg-black  vh-100 ">
+      <div className="bg-dark card text-center d-flex align-items-center vh-100 justify-content-center bg-black  vh-100 ">
         <div
           className=""
           style={{
@@ -15,8 +29,8 @@ const StillHere = () => {
         >
           <div className="d-block container my-2 p-4">
             <h1 className="card-title display-4 d-flex align-items-center fw-bold justify-content-center textb">
-              <p className="m-2 textw">Still</p>
-              <p className="m-2 texto">Here?</p>
+              <p className="m-2 textw" style={{ fontSize: "5rem" }}>Still</p>
+              <p className="m-2 texto" style={{ fontSize: "5rem" }}>Here?</p>
             </h1>
           </div>
           <div
@@ -29,12 +43,16 @@ const StillHere = () => {
               Here’s a Discord link for you to stay connected with us.
               <button
                 type="button"
-                className="  textb fw-bold fs-4 m-3"
+                className="btn border-opacity-25 fw-bold fs-4 m-2 border border-light"
                 style={{
                   width: "170px",
-                  height: "65px",
-                  background: "#D9D9D9",
+                  height: "60px",
+                  backgroundColor: isHover ? '#F69C27' : '#000000',
+                  color:isHover ? '#000000' : '#f5f5f7'
+                  
                 }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 Connect
               </button>

@@ -9,12 +9,12 @@ const HomeScreen = () => {
   return (
     <div>
       <Hero />
-      {/* <Whatsnew /> */}
+      <Whatsnew />
       
-      {/* <StillHere /> */}
+      
       <Earlyaccess />
       <AboutUs />
-    
+    <StillHere />
     </div>
   );
 };
