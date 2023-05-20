@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
 import analytics from "../assets/analytics.png";
 import spamfree from "../assets/spamfree.png";
 import eventcalender from "../assets/eventcalender.png";
+import "../styles/earlyaccess.css";
+
+
+
+
+
+
 const Earlyaccess = () => {
   let name, value;
 
   const [user, setUser] = useState({
     name: "",
     email: "",
+    phone: "",
   });
 
   const handleInputs = (e) => {
@@ -40,7 +48,6 @@ const Earlyaccess = () => {
     },
   };
 
-
   const card1 = {
     img: `${analytics}`,
     title: "Analytics",
@@ -59,87 +66,106 @@ const Earlyaccess = () => {
     desc: "View upcoming events and get tickets for your favourite Creators.",
   };
 
+const [totalUser,setTotalUser]=useState(1000);
+
+const handleClick=async()=>{
+
+ 
+
+}
+
   return (
-    <div className="p-3 " style={{backgroundColor:"#000000"}}>
-      <div className="card text-center d-flex align-items-center vh-100 justify-content-evenly  " style={{backgroundColor:"#000000", borderRadius:0}}>
+    <div className="p-3" style={{ background: "#000000" }}>
+      <div
+        className="card text-center d-flex align-items-center  justify-content-evenly  "
+        style={{ backgroundColor: "#000000", borderRadius: 0 }}
+      >
         <div className="d-block container mb-1 p-3">
-          <h1 className="card-title textb  d-flex align-items-center fw-bold justify-content-center ">
-            <p className="textw" style={{ fontSize: "5rem" }}>get-early-</p>
-            <p className="texto" style={{ fontSize: "5rem" }}>access!</p>
+          <h1 className=" fw-bold responsivetitle ">
+            <span className="textw  ">get-early-</span>
+            <span className="texto  ">access!</span>
           </h1>
         </div>
 
-        <form
-          method="POST"
-          className="p-4 rounded border border-opacity-25"
-          style={{
-            height: "auto",
-            width: "30%",
-          }}
-        >
+        <form method="POST" className="p-4 rsform ">
           <div className="mb-3">
             <input
               type="text"
-              className="form-control form-control-lg"
+              className="form-control form-control-lg rsinputs"
               placeholder="Name"
               name="name"
+              onChange={handleInputs}
+              value={user.name}
             />
           </div>
           <div className=" mb-3">
             <input
               type="email"
-              className="form-control form-control-lg"
+              className="form-control form-control-lg rsinputs"
               placeholder="Your Best E-mail!"
               name="email"
+              onChange={handleInputs}
+              value={user.email}
+            />
+          </div>
+
+          <div className=" mb-3">
+            <input
+              type="number"
+              className="form-control form-control-lg rsinputs"
+              placeholder="Your phone (optional!)"
+              name="phone"
+              onChange={handleInputs}
+              value={user.phone}
             />
           </div>
 
           <button
             type="submit"
-            className="btn btn-lg fw-bold w-100 textw"
-            style={{backgroundColor:"#EF6831"}}
+            className="btn  fw-bold textw rsbtn d-flex align-items-center  justify-content-center"
+            onClick={handleClick}
           >
             I’M IN!
           </button>
         </form>
 
-        <div className="d-block container p-3">
-          <h1 className="card-title textb display-4 d-flex align-items-center  justify-content-center ">
-            <p className="textw">100+</p>
-            <p className="texto mx-2">sign ups </p>
-            <p className="textw">and counting</p>
+        
+        <div className="d-block container m-3 p-3">
+          <h1 className=" fw-bold responsivetitle ">
+            <span className="textw  ">Only {totalUser} </span>
+            <span className="texto mx-2 ">Sign-ups</span>
+            <span className="textw  ">left , hurry!</span>
           </h1>
         </div>
       </div>
 
-
       <Carousel responsive={responsive}>
-          <div className="" >
-            <Card />
-          </div>
-          <div className="">
-            <Card />
-          </div>
-          <div className="">
-            <Card />
-          </div>
-          <div className="">
-            <Card />
-          </div>
-          <div className="">
-            <Card />
-          </div>
-        </Carousel>
+        <div className="">
+          <Card />
+        </div>
+        <div className="">
+          <Card />
+        </div>
+        <div className="">
+          <Card />
+        </div>
+        <div className="">
+          <Card />
+        </div>
+        <div className="">
+          <Card />
+        </div>
+      </Carousel>
 
-     
-
-      <div className="d-flex justify-content-center" style={{backgroundColor:"#000000"}}>
-       
-        <p className="textw m-2">
+      <h1
+        className="d-flex justify-content-center smalltext"
+        style={{ backgroundColor: "#000000" }}
+      >
+        <span className="textw ">
           Psstt... Wanna let your friends know about this?
-        </p>
-        <p className="texto m-2 fw-bold">Share</p>
-      </div>
+          <span className="texto d-inline  fw-bold">Share</span>
+        </span>
+      </h1>
     </div>
   );
 };

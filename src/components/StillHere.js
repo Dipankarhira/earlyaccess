@@ -1,36 +1,28 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import whatsapp from "../assets/whatsapp.png";
 import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
+import "../styles/stillhere.css";
 const StillHere = () => {
-
   const [isHover, setIsHover] = useState(false);
 
   const handleMouseEnter = () => {
-     setIsHover(true);
+    setIsHover(true);
   };
   const handleMouseLeave = () => {
-     setIsHover(false);
+    setIsHover(false);
   };
 
-  const boxStyle = {
-    
-  };
+  const boxStyle = {};
 
   return (
-    <div className=" ">
-      <div className="bg-dark card text-center d-flex align-items-center vh-100 justify-content-center bg-black  vh-100 ">
-        <div
-          className=""
-          style={{
-            height: "50%",
-            width: "75%",
-          }}
-        >
-          <div className="d-block container my-2 p-4">
-            <h1 className="card-title display-4 d-flex align-items-center fw-bold justify-content-center textb">
-              <p className="m-2 textw" style={{ fontSize: "5rem" }}>Still</p>
-              <p className="m-2 texto" style={{ fontSize: "5rem" }}>Here?</p>
+    <div className="">
+      <div className="card main text-center d-flex align-items-center justify-content-center bg-black">
+        <div>
+          <div className=" container my-2 p-4">
+            <h1 className="rstitle d-flex align-items-center fw-bold justify-content-center textb">
+              <span className="m-2 textw">Still</span>
+              <span className="m-2 texto">Here?</span>
             </h1>
           </div>
           <div
@@ -39,16 +31,16 @@ const StillHere = () => {
               height: "30%",
             }}
           >
-            <p className="card-text  fs-4 container textw">
+            <p className="rstext container textw">
               Here’s a Discord link for you to stay connected with us.
               <button
                 type="button"
-                className="btn border-opacity-25 fw-bold fs-4 m-2 border border-light"
+                className="btn border-opacity-25 fw-bold  mx-1  border border-light"
                 style={{
                   width: "170px",
-                  height: "60px",
-                  backgroundColor: isHover ? '#F69C27' : '#000000',
-                  color:isHover ? '#000000' : '#f5f5f7'
+                  height: "50px",
+                  backgroundColor: isHover ? "#F69C27" : "#000000",
+                  color: isHover ? "#000000" : "#f5f5f7",
                   
                 }}
                 onMouseEnter={handleMouseEnter}
@@ -59,28 +51,18 @@ const StillHere = () => {
             </p>
           </div>
         </div>
-        <div className="container m-3">
-          <p className="textw">Contact Us</p>
-          <div className="d-block">
-            <img
-              className="m-4"
-              src={whatsapp}
-              style={{ height: "50px", width: "50px" }}
-            />
-            <img
-              className="m-4"
-              src={instagram}
-              style={{ height: "50px", width: "50px" }}
-            />
-            <img
-              className="m-4"
-              src={twitter}
-              style={{ height: "50px", width: "50px" }}
-            />
+        <div className="footer">
+          <div className="container ">
+            <p className="textw">Contact Us</p>
+            <div className="d-block">
+              <img className="rsicon mx-4" src={whatsapp} />
+              <img className="rsicon mx-4" src={instagram} />
+              <img className="rsicon mx-4" src={twitter} />
+            </div>
           </div>
-        </div>
-        <div className="container mt-4 pt-4">
-          <p className="textw">© xongroh.com | 2019-23</p>
+          <div className="container  mt-3">
+            <p className="textw text3">© xongroh.com | 2019-23</p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,33 @@
+.background {
+  background-image: url("../assets/Desktop.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 480px) {
+  .background {
+    height: 640px;
+  
+  }
+}
+
+.responsivetext {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .responsivetext {
+    font-size: 15px;
+  }
+}
+.responsivexongroh {
+  font-size: 70px;
+}
+
+@media screen and (max-width: 480px) {
+  .responsivexongroh {
+    font-size: 40px;
+  }
+}

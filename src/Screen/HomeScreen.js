@@ -4,6 +4,7 @@ import AboutUs from "../components/AboutUs";
 import StillHere from "../components/StillHere";
 import Earlyaccess from "../components/Earlyaccess";
 import Whatsnew from "../components/Whatsnew";
+import Loader from "../components/Loader";
 
 const HomeScreen = () => {
   return (

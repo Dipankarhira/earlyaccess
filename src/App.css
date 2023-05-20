@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-
 .textw {
   color: #f5f5f7;
   font-family: "Inter", sans-serif;
@@ -14,14 +13,38 @@
   color: #1d1d1f;
 }
 
-.texto{
-  color:#F69C27;
-
+.texto {
+  color: #f69c27;
 }
 
 .bgw {
   background-color: #fbfbfd;
 }
+.bgb{
+  background: #000;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) perspective(200px) rotateX(0deg)
+      rotateY(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) perspective(200px) rotateX(0deg)
+      rotateY(180deg);
+  }
+ 
+}
 
 
 
+
+ 

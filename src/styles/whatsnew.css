@@ -1,0 +1,52 @@
+.responsivetitle {
+  font-size: 48px;
+}
+
+@media screen and (max-width: 480px) {
+  .responsivetitle {
+    font-size: 30px;
+  }
+}
+
+.rsimage {
+  width: 90px;
+  height: 90px;
+  border-radius: 0px;
+}
+@media screen and (max-width: 480px) {
+  .rsimage {
+    width: 61.28px;
+    height: 57.06px;
+  }
+}
+
+.rscard {
+  width: 368px;
+  height: 388px;
+  background: #fbfbfd;
+  border: 2px solid #f5f5f7;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .rscard {
+    width: 247px;
+    height: 273px;
+
+    border-radius: 15px;
+  }
+}
+
+
+.main{
+  background: #FBFBFD;
+ 
+  
+}
+@media screen and (max-width:480px) {
+
+  .main{
+    height: 520px;
+
+  }
+}

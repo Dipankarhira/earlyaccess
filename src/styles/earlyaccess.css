@@ -1,0 +1,109 @@
+.responsivetitle {
+  font-size: 48px;
+}
+
+@media screen and (max-width: 480px) {
+  .responsivetitle {
+    font-size: 20px;
+  }
+}
+
+.smalltext {
+  font-size: 15px;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  .smalltext {
+    font-size: 12px;
+    padding: 0px 40px;
+  }
+}
+
+.rsimage {
+  width: 90px;
+  height: 90px;
+  border: 2px;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  .rsimage {
+    width: 61.28px;
+    height: 57.06px;
+  }
+}
+
+.box {
+  border-radius: 15px;
+}
+
+.textcard {
+  font-size: 16px;
+  text-align: justify;
+}
+@media screen and (max-width: 480px) {
+  .textcard {
+    font-size: 12px;
+  }
+}
+
+.rsform {
+  border: 3px solid rgb(112, 111, 111);
+  border-radius: 15px;
+  width: 499px;
+  height: 390px;
+  
+}
+@media screen and (max-width: 480px) {
+  .rsform {
+    width: 306px;
+    height: 270px;
+  }
+}
+
+.rsinputs {
+  color: rgba(66, 66, 69, 0.5);
+  width: 430px;
+  height: 63px;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .rsinputs {
+    color: rgba(66, 66, 69, 0.5);
+    width: 242px;
+    height: 31px;
+    font-size: 14px;
+  }
+}
+
+.rsbtn {
+  width: 430px;
+  height: 63px;
+  font-size: 28px;
+  background: #f48024;
+}
+@media screen and (max-width: 480px) {
+  .rsbtn {
+    width: 242px;
+    height: 31px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rscard {
+    width: 244px;
+    height: 332px;
+  }
+}
+
+.responsivetitle2 {
+  font-size: 48px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 480px) {
+  .responsivetitle2 {
+    font-size: 20px;
+  }
+}
+
+

@@ -2,11 +2,12 @@ import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./Card";
+
 import Card2 from "./Card2";
 import analytics from "../assets/analytics.png";
 import spamfree from "../assets/spamfree.png";
 import eventcalender from "../assets/eventcalender.png";
+import "../styles/whatsnew.css";
 
 const Whatsnew = () => {
   const card1 = {
@@ -29,7 +30,6 @@ const Whatsnew = () => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -48,34 +48,33 @@ const Whatsnew = () => {
   };
 
   return (
-    <div className="container  vh-100 ">
-      <div>
+    <div className="container  main  ">
+      <div className=" py-2">
         <h1 className="d-flex align-items-center fw-bold justify-content-center mt-5 mb-5">
-          <p className="textb m-2" style={{ fontSize: "5rem" }}>
-            What's{" "}
-          </p>
-          <p className="texto m-2" style={{ fontSize: "5rem" }}>
-            New?
-          </p>
+          <p className="textb m-2 responsivetitle">What's </p>
+          <p className="texto m-2 responsivetitle">New?</p>
         </h1>
-
-        <Carousel responsive={responsive}>
-          <div className="">
-            <Card2 {...card1} />
-          </div>
-          <div className="">
-            <Card2 {...card2} />
-          </div>
-          <div className="">
-            <Card2 {...card3} />
-          </div>
-          <div className="">
-            <Card2 {...card1} />
-          </div>
-          <div className="">
-            <Card2 {...card3} />
-          </div>
-        </Carousel>
+        <div className="mx-auto">
+          <Carousel responsive={responsive}>
+            
+              <Card2 {...card1} />
+            
+            
+              <Card2 {...card2} />
+            
+            
+              <Card2 {...card3} />
+            
+            
+              <Card2 {...card1} />
+            
+            
+              <Card2 {...card3} />
+              <Card2 {...card1} />
+              <Card2 {...card3} />
+            
+          </Carousel>
+        </div>
       </div>
     </div>
   );
