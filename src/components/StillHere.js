@@ -17,50 +17,56 @@ const StillHere = () => {
 
   return (
     <div className="">
-      <div className="card main text-center d-flex align-items-center justify-content-center bg-black">
-        <div>
-          <div className=" container my-2 p-4">
-            <h1 className="rstitle d-flex align-items-center fw-bold justify-content-center textb">
+      <div
+        className="card main text-center d-flex align-items-center justify-content-center bg-black "
+        style={{ height: "520px" }}
+      >
+        <div className="">
+          <div className=" container my-2 p-4 ">
+            <h1 className="rstitle d-flex align-items-center fw-bold justify-content-center textb ">
               <span className="m-2 textw">Still</span>
-              <span className="m-2 texto">Here?</span>
+              <span className="m-2 " style={{ color: "#EF6831" }}>
+                Here?
+              </span>
             </h1>
           </div>
-          <div
-            className=" container  d-flex align-items-center justify-content-center"
-            style={{
-              height: "30%",
-            }}
-          >
-            <p className="rstext container textw">
-              Here’s a Discord link for you to stay connected with us.
-              <button
-                type="button"
-                className="btn border-opacity-25 fw-bold  mx-1  border border-light"
-                style={{
-                  width: "170px",
-                  height: "50px",
-                  backgroundColor: isHover ? "#F69C27" : "#000000",
-                  color: isHover ? "#000000" : "#f5f5f7",
-                  
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                Connect
-              </button>
-            </p>
-          </div>
-        </div>
-        <div className="footer">
-          <div className="container ">
-            <p className="textw">Contact Us</p>
-            <div className="d-block">
-              <img className="rsicon mx-4" src={whatsapp} />
-              <img className="rsicon mx-4" src={instagram} />
-              <img className="rsicon mx-4" src={twitter} />
+
+          <div className="rstext container textw  connect">
+            Here’s a Discord link for you to stay connected with us.
+            <div className="rsdiv ">
+              <a href="https://discord.gg/HRuR5zsSM3" style={{textDecoration:"none"}}>
+                <button
+                  type="button"
+                  className="btn fw-bold rsbtn2  "
+                  style={{
+                    backgroundColor: isHover ? "#F69C27" : "#000000",
+                    color: isHover ? "#000000" : "#f5f5f7",
+                  }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  Connect
+                </button>
+              </a>
             </div>
           </div>
-          <div className="container  mt-3">
+        </div>
+        <div className="footer ">
+          <div className="container ">
+            <p className="textw text3">Contact Us</p>
+            <div className="d-block">
+              <a href="https://wa.me/919127510087?text=hello">
+                <img className="rsicon mx-3" src={whatsapp} />
+              </a>
+              <a href="https://instagram.com/xongroh">
+                <img className="rsicon mx-3" src={instagram} />
+              </a>
+              <a href="https://twitter.com/xongroh">
+                <img className="rsicon mx-3" src={twitter} />
+              </a>
+            </div>
+          </div>
+          <div className="container  copywright">
             <p className="textw text3">© xongroh.com | 2019-23</p>
           </div>
         </div>

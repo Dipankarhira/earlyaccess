@@ -9,7 +9,7 @@ const Card = (props) => {
     >
       <div className="row g-0">
         <div className="col my-auto">
-          {/* <img src="..." className="img-fluid rounded-start" alt="..." /> */}
+          
           <div
             className="card    d-flex justify-content-center align-tems-center"
             style={{ backgroundColor: "#000000" }}
@@ -20,7 +20,7 @@ const Card = (props) => {
               style={{ backgroundColor: "#000000" }}
             >
               <h5 className="card-title  textw fw-bold">Bisrut Saikia</h5>
-              <p className="card-text texto">Singer</p>
+              <p className="card-text" style={{color:"#EF6831"}}>Singer</p>
             </div>
           </div>
         </div>

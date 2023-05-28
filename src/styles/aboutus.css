@@ -46,3 +46,28 @@ li {
     height: 520px;
   }
 }
+
+.us{
+  width: 100px;
+height: 100px;
+background-size: cover;
+margin: 0px 40px;
+}
+
+@media screen and (max-width:480px) {
+  .us{
+    width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  
+  }
+}
+.names{
+  font-size: 16px;
+    }
+
+@media screen and (max-width:480px) {
+  .names{
+font-size: 12px;
+  }
+}

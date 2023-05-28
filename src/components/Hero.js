@@ -3,17 +3,14 @@ import Xongroh from "../assets/Xongroh.svg";
 import '../styles/Hero.css';
 const Hero = () => {
   return (
-    <div className="w-100 background ">
+    <div className=" background ">
       <div
-        className="text-center d-flex align-items-center   justify-content-center vh-100 "
+        className="text-center d-flex align-items-center   justify-content-center  vh-100 "
        
       >
         <div
-          className=" "
-          style={{
-            height: "50%",
-            width: "75%",
-          }}
+          className=" p-2"
+         
         >
           <div className="d-block container ">
             <h1 className="textw display-3 d-flex align-items-center  justify-content-center">
@@ -22,7 +19,7 @@ const Hero = () => {
                 style={{ height: "3em", width: "2em", borderRadius: 0 }}
                 className=" "
               />
-              <p className="texto fw-bold responsivexongroh" >
+              <p className="texto mt-3 pt-1 fw-bold responsivexongroh" >
                 ongroh
               </p>
             </h1>

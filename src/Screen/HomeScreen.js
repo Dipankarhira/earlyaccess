@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect, useState} from "react";
 import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
 import StillHere from "../components/StillHere";
@@ -7,6 +7,8 @@ import Whatsnew from "../components/Whatsnew";
 import Loader from "../components/Loader";
 
 const HomeScreen = () => {
+
+
   return (
     <div>
       <Hero />

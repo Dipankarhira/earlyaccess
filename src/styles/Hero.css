@@ -9,7 +9,7 @@
 @media screen and (max-width: 480px) {
   .background {
     height: 640px;
-  
+  background-image: url("../assets/backgroundmobile");
   }
 }
 
@@ -24,6 +24,7 @@
 }
 .responsivexongroh {
   font-size: 70px;
+  color: #F69C27;
 }
 
 @media screen and (max-width: 480px) {

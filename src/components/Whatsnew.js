@@ -7,6 +7,14 @@ import Card2 from "./Card2";
 import analytics from "../assets/analytics.png";
 import spamfree from "../assets/spamfree.png";
 import eventcalender from "../assets/eventcalender.png";
+import brandmanagement from "../assets/Brand@4x.png";
+import collab from "../assets/Collab@4x.png";
+import marketplace from "../assets/Market@4x.png";
+import masterclass from "../assets/Masterclass@4x.png";
+import patron from "../assets/Patron@4x.png";
+import portfolio from "../assets/Portfolio@4x.png";
+import community from "../assets/Community@4x.png";
+
 import "../styles/whatsnew.css";
 
 const Whatsnew = () => {
@@ -26,6 +34,47 @@ const Whatsnew = () => {
     img: `${eventcalender}`,
     title: "Event Calender",
     desc: "View upcoming events and get tickets for your favourite Creators.",
+  };
+
+  const card4 = {
+    img: `${brandmanagement}`,
+    title: "Brand Management",
+    desc: "Creator Management and Brand Endorsement.",
+  };
+
+  const card5 = {
+    img: `${collab}`,
+    title: "Collab",
+    desc: "Create and grow with other Creators.",
+  };
+
+  const card6 = {
+    img: `${marketplace}`,
+    title: "Marketplace",
+    desc: "Earn money by selling rights, commissions, goods, and much more... ",
+  };
+
+  const card7 = {
+    img: `${masterclass}`,
+    title: "Masterclass",
+    desc: "Learn from the experts.",
+  };
+
+  const card8 = {
+    img: `${patron}`,
+    title: "Patrons",
+    desc: "Create a loyal fan base that will support you on throughout your journey.",
+  };
+
+  const card9 = {
+    img: `${portfolio}`,
+    title: "Portfolio",
+    desc: "Make a Professional Portfolio and share your work with others.",
+  };
+  const card10 = {
+    img: `${community}`,
+    title: "Community",
+    desc: "Interact with communities and share your ideas.",
   };
 
   const responsive = {
@@ -48,34 +97,43 @@ const Whatsnew = () => {
   };
 
   return (
-    <div className="container  main  ">
-      <div className=" py-2">
-        <h1 className="d-flex align-items-center fw-bold justify-content-center mt-5 mb-5">
-          <p className="textb m-2 responsivetitle">What's </p>
-          <p className="texto m-2 responsivetitle">New?</p>
-        </h1>
-        <div className="mx-auto">
-          <Carousel responsive={responsive}>
-            
-              <Card2 {...card1} />
-            
-            
-              <Card2 {...card2} />
-            
-            
-              <Card2 {...card3} />
-            
-            
-              <Card2 {...card1} />
-            
-            
-              <Card2 {...card3} />
-              <Card2 {...card1} />
-              <Card2 {...card3} />
-            
-          </Carousel>
+    <div className=" main ">
+      <h1 className="d-flex align-items-center fw-bold justify-content-center  pt-4">
+        <p className="textb  responsivetitle">What's </p>
+        <p className=" mx-2 responsivetitle" style={{color:"#EF6831"}}>New?</p>
+      </h1>
+      <Carousel responsive={responsive} className="">
+        <div className="d-flex justify-content-center ">
+          <Card2 {...card9} />
         </div>
-      </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card5} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card10} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card6} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card2} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card3} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card7} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card1} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card4} />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Card2 {...card8} />
+        </div>
+      </Carousel>
     </div>
   );
 };

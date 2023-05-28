@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
@@ -6,12 +6,8 @@ import analytics from "../assets/analytics.png";
 import spamfree from "../assets/spamfree.png";
 import eventcalender from "../assets/eventcalender.png";
 import "../styles/earlyaccess.css";
-
-
-
-
-
-
+import share from "../assets/share.png";
+import { RWebShare } from "react-web-share";
 const Earlyaccess = () => {
   let name, value;
 
@@ -66,13 +62,48 @@ const Earlyaccess = () => {
     desc: "View upcoming events and get tickets for your favourite Creators.",
   };
 
-const [totalUser,setTotalUser]=useState(1000);
+  const [totalUser, setTotalUser] = useState();
 
-const handleClick=async()=>{
+  const handleRegistration = async (e) => {
+    e.preventDefault();
+    const { name, email, phone } = user;
+    try {
+      const res = await fetch("/register", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, phone }),
+      });
 
- 
+      const data = await res.json();
 
-}
+      if (res.status === 501 || !data) {
+        window.alert("Registration fail");
+      } else {
+        window.alert("Registration Sucessful");
+        userLeft();
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const userLeft = async () => {
+    try {
+      const res = await fetch("/allusers");
+      const data = await res.json();
+      console.log(data.length);
+      setTotalUser(1000 - data.length);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    userLeft();
+  }, []);
 
   return (
     <div className="p-3" style={{ background: "#000000" }}>
@@ -80,25 +111,25 @@ const handleClick=async()=>{
         className="card text-center d-flex align-items-center  justify-content-evenly  "
         style={{ backgroundColor: "#000000", borderRadius: 0 }}
       >
-        <div className="d-block container mb-1 p-3">
+        <div className="d-block container mb-1 p-3 bg-ligh">
           <h1 className=" fw-bold responsivetitle ">
             <span className="textw  ">get-early-</span>
-            <span className="texto  ">access!</span>
+            <span style={{ color: "#EF6831" }}>access!</span>
           </h1>
         </div>
 
         <form method="POST" className="p-4 rsform ">
-          <div className="mb-3">
+          <div className="mb-3 d-flex justify-content-center">
             <input
               type="text"
-              className="form-control form-control-lg rsinputs"
+              className="form-control form-control-lg rsinputs "
               placeholder="Name"
               name="name"
               onChange={handleInputs}
               value={user.name}
             />
           </div>
-          <div className=" mb-3">
+          <div className=" mb-3 d-flex justify-content-center">
             <input
               type="email"
               className="form-control form-control-lg rsinputs"
@@ -109,7 +140,7 @@ const handleClick=async()=>{
             />
           </div>
 
-          <div className=" mb-3">
+          <div className=" mb-3 d-flex justify-content-center">
             <input
               type="number"
               className="form-control form-control-lg rsinputs"
@@ -119,27 +150,29 @@ const handleClick=async()=>{
               value={user.phone}
             />
           </div>
-
-          <button
-            type="submit"
-            className="btn  fw-bold textw rsbtn d-flex align-items-center  justify-content-center"
-            onClick={handleClick}
-          >
-            I’M IN!
-          </button>
+          <div className="d-flex justify-content-center">
+            <button
+              type="submit"
+              className="  fw-bold textw rsbtn d-flex align-items-center  justify-content-center"
+              onClick={handleRegistration}
+            >
+              I’M IN!
+            </button>
+          </div>
         </form>
 
-        
-        <div className="d-block container m-3 p-3">
-          <h1 className=" fw-bold responsivetitle ">
+        <div className=" container mt-4 p-3">
+          <h1 className=" fw-bold responsivetitle2 ">
             <span className="textw  ">Only {totalUser} </span>
-            <span className="texto mx-2 ">Sign-ups</span>
-            <span className="textw  ">left , hurry!</span>
+            <span className="mx-1 " style={{ color: "#EF6831" }}>
+              Sign-ups
+            </span>
+            <span className="textw  text-wrap">left , hurry!</span>
           </h1>
         </div>
       </div>
 
-      <Carousel responsive={responsive}>
+      {/* <Carousel responsive={responsive}>
         <div className="">
           <Card />
         </div>
@@ -155,17 +188,20 @@ const handleClick=async()=>{
         <div className="">
           <Card />
         </div>
-      </Carousel>
-
-      <h1
-        className="d-flex justify-content-center smalltext"
-        style={{ backgroundColor: "#000000" }}
-      >
-        <span className="textw ">
-          Psstt... Wanna let your friends know about this?
-          <span className="texto d-inline  fw-bold">Share</span>
-        </span>
-      </h1>
+      </Carousel> */}
+      <RWebShare data={{ title: "share" }}>
+        <h1
+          className="d-flex justify-content-center smalltext"
+          style={{ backgroundColor: "#000000" }}
+        >
+          <span className="textw ">
+            Psstt... Wanna let your friends know about this?
+            <span className="d-inline ms-1 fw-bold" style={{ color: "#FF5F1F" }}>
+              Share{" "}
+            </span>
+          </span>
+        </h1>
+      </RWebShare>
     </div>
   );
 };
