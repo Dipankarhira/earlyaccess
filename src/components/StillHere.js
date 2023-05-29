@@ -34,7 +34,7 @@ const StillHere = () => {
           <div className="rstext container textw  connect">
             Here’s a Discord link for you to stay connected with us.
             <div className="rsdiv ">
-              <a href="https://discord.gg/HRuR5zsSM3" style={{textDecoration:"none"}}>
+              <a href="https://discord.gg/HRuR5zsSM3" style={{textDecoration:"none"}} target="blank">
                 <button
                   type="button"
                   className="btn fw-bold rsbtn2  "
@@ -44,6 +44,7 @@ const StillHere = () => {
                   }}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  
                 >
                   Connect
                 </button>
@@ -55,13 +56,13 @@ const StillHere = () => {
           <div className="container ">
             <p className="textw text3">Contact Us</p>
             <div className="d-block">
-              <a href="https://wa.me/919127510087?text=hello">
+              <a href="https://wa.me/919127510087?text=hello" target="blank">
                 <img className="rsicon mx-3" src={whatsapp} />
               </a>
-              <a href="https://instagram.com/xongroh">
+              <a href="https://instagram.com/xongroh" target="blank">
                 <img className="rsicon mx-3" src={instagram} />
               </a>
-              <a href="https://twitter.com/xongroh">
+              <a href="https://twitter.com/xongroh" target="blank">
                 <img className="rsicon mx-3" src={twitter} />
               </a>
             </div>

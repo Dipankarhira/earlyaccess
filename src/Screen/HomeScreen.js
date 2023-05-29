@@ -18,6 +18,7 @@ const HomeScreen = () => {
       <Earlyaccess />
       <AboutUs />
     <StillHere />
+   
     </div>
   );
 };
